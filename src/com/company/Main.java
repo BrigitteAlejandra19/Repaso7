@@ -49,8 +49,10 @@ public class Main {
       reptiles.add(zoraida);
       reptiles.add(joe);
 
+
         System.out.println("Hay "+reptiles.size() +" Reptiles");
         for (int i=0; i<reptiles.size();i++) {
+            if ( reptiles.get(i).getEdad() > 10 ) {
             System.out.println("Reptil: " +reptiles.get(i).getCollar());
             System.out.println("Edad:" +reptiles.get(i).getEdad());
 
@@ -60,8 +62,23 @@ public class Main {
                 System.out.println("Horario almuerzo: " +listaHorarios.get(j).getAlmuerzo());
                 System.out.println("Horario cena: " +listaHorarios.get(j).getCena());
             }
+            }
 
         }
         System.out.println("Hay "+mamiferos.size() +" Mamiferos");
+        for (int i=0; i<mamiferos.size();i++) {
+            System.out.println("Mamiferos: " +mamiferos.get(i).getCollar());
+            System.out.println("Vacuna:" +mamiferos.get(i).isVacuna());
+
+            List<HorarioComidas>  listaHorarios = mamiferos.get(i).getHorarios();
+            for (int j=0; j<listaHorarios.size();j++) {
+                System.out.println("Horario desayuno: "  +listaHorarios.get(j).getDesayuno());
+                System.out.println("Horario almuerzo: " +listaHorarios.get(j).getAlmuerzo());
+                System.out.println("Horario cena: " +listaHorarios.get(j).getCena());
+            }
+
     }
+
+    }
+
 }

@@ -22,4 +22,7 @@ public class Reptiles extends Animal {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-}
+
+
+        }
+
